@@ -16,10 +16,14 @@ class ViewController: UIViewController {
     
     
     @IBAction func digits(_ sender: UIButton) {
-        textField.text =  textField.text! + String(sender.tag)
-        numberForScreen = Double(textField.text!)!
-        
-        
+        if Int(textField.text!) == 0 {
+           textField.text = String(sender.tag)
+            
+        }else {
+            textField.text =  textField.text! + String(sender.tag)
+            numberForScreen = Double(textField.text!)!
+            
+        }
     }
     
     
